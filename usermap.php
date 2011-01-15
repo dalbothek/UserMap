@@ -15,7 +15,7 @@ class UserMap {
 		} else if(is_a($user, "UserMapUser")) {
 			$this->$users[] = $user;
 		} else {
-			trigger_error("Wrong format (shoud be UserMapUser or array)");
+			trigger_error("Wrong format (expected UserMapUser or array)");
 		}
 	}
 	
@@ -25,7 +25,7 @@ class UserMap {
 				$this->add($user);
 			}
 		} else {
-			trigger_error("Wrong format (should be array)")
+			trigger_error("Wrong format (expected array)")
 		}
 	}
 
@@ -40,7 +40,29 @@ class UserMapUser {
 		} else if (is_string($data)) {
 			$this->name = $data;
 		} else if($data != Null) {
-			trigger_error("Wrong format (should be string or array)");
+			trigger_error("Wrong format (expected string or array)");
+		}
+	}
+	
+	/** 
+	 * Set all properties with an array.
+	 *
+	 * The array must be formatted like this: name, city, latitude, longitude, url, [image], [additional info]
+	 * name: string
+	 * city: string
+	 * latitude: float (degrees)
+	 * longitude: float (degrees)
+	 * url: string (absolute)
+	 * image: string (url, optional)
+	 * info: assoc array (optional)
+	 */
+	public function set($data) {
+		if(is_array($data)) {
+			foreach($data as $field) {
+				if(count())
+			}
+		} else {
+			trigger_error("Wrong format (expected array)");
 		}
 	}
 }
