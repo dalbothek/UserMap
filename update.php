@@ -6,8 +6,8 @@
 		$user = new UserMapUser();
 		$user->name = randomString(mt_rand(5,10));
 		$user->city = randomString(mt_rand(5,10));
-		$user->lat = mt_rand(-90, 90);
-		$user->long = mt_rand(-180, 180);
+		$user->lat = mt_rand(460, 480)/10;
+		$user->long = mt_rand(60, 80)/10;
 		$user->url = "http://www." . randomString(mt_rand(3,15)) . ".com";
 		return $user;
 	}
@@ -18,14 +18,9 @@
 			
 	$map = new UserMap();
 	
-	for($i=0; $i<20; $i++) {
+	for($i=0; $i<200; $i++) {
 		$map->add(randomUser());
 	}
 	
-	if($map->save()) {
-		echo "Success";
-	} else {
-		echo "Fail";
-	}
+	$map->save();
 ?>
-
