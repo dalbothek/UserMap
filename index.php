@@ -9,7 +9,7 @@
 		<?php
 			require_once('usermap.php');
 			
-			$map = new UserMap();
+		
 		?>
 	</body>
 </html>
