@@ -1,7 +1,31 @@
 #usermap {
-	width: 800px;
 	height: 600px;
 	position: relative;
+}
+
+#locationfinder, #usermap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#locationfinder {
+	padding: 5px 0;
+}
+
+	#locationfinder a {
+		border: 1px solid black;
+		background: #eee;
+		padding: 0 3px;
+		text-decoration: none;
+		color: black;
+	}
+
+	#locationfinder input {
+		width: 400px;
+	}
+
+#locationfinder span {
+	margin-left: 5px;
 }
 
 #usermap_map {
@@ -9,19 +33,49 @@
 	height: 100%;
 }
 
-#usermap_overlay {
+#usermap_findinfo {
+	top: 15px;
+	left: 100px;
+	width: 300px;
+	height: 50px;
+	padding: 5px 5px 5px 60px;
+	background: url(http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png) no-repeat 15px center;
+	position: relative;
+}
+
+#usermap_overlay, #usermap_findinfo {
 	display: none;
 	position: absolute;
-	width: 200px;
-	min-height: 50px;
+	
 	overflow: hidden;
 	
-	background: #fff;
+	background-color: #fff;
 	border: #666 solid 1px;
 	
 	box-shadow: 10px 10px 5px #888;
 	-webkit-box-shadow: 3px 3px 5px #000;
 	-moz-box-shadow: 10px 10px 5px #888;
+}
+
+#usermap_overlay {
+	width: 200px;
+	min-height: 50px;
+}
+
+#usermap_findinfo div {
+	display: none;
+}
+
+#usermap_findinfo a {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+#usermap_findtip {
+	color: #aaa;
+	font-size: 9px;
+	display: block;
 }
 
 #usermap_avatar {

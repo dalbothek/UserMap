@@ -18,7 +18,19 @@
 	<body>
 		<div id="usermap">
 			<div id="usermap_map"></div>
-			<div id="usermap_loader"></div>
+			<div id="usermap_findinfo">
+				<div id="usermap_findselect">
+					<span>Wähle einen der markierten Positionen aus.</span>
+				</div>
+				<div id="usermap_findsave">
+					<span id="usermap_findaddress"></span>
+					<span id="usermap_findtip">Bewege die Markierung um die Position zu korrigieren.</span>
+					<a href="#" onclick="return savePosition()">Speichern</a>
+				</div>
+				<div id="usermap_findfail">
+					<span>Der angegebene Ort wurde nicht gefunden.</span>
+				</div>
+			</div>
 			<div id="usermap_overlay">
 				<img id="usermap_avatar" src="avatar.png" alt="sadimusi" />
 				<div id="usermap_info">
@@ -26,6 +38,12 @@
 					<span id="usermap_city">Biel</span>
 				</div>
 			</div>
+		</div>
+		<div id="locationfinder">
+			<span>Eigener Wohnort suchen:</span>
+			<input type="text" id="locationfinder_box" onkeypress="keyDownHandler(event)" />
+			<a href="#" onclick="return findLocation()">Suchen</a>
+			<a href="#" onclick="return markHere()">opa button</a>
 		</div>
 	</body>
 </html>
