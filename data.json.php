@@ -8,7 +8,7 @@
 		u.userid
 		FROM " . TABLE_PREFIX . "user as u");
 	
-	$host = $_SERVER['REMOTE_HOST'];
+	$host = "http://{$_SERVER['HTTP_HOST']}";
 	
 	while ($user = $vbulletin->db->fetch_array($users))
 	{
