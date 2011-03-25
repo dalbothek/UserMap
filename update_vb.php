@@ -1,5 +1,6 @@
 <?php
 	require_once('usermap.php');
+	require_once('/global.php');
 			
 	$map = new UserMap();
 	
