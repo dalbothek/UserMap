@@ -39,6 +39,10 @@ class UserMap {
 		fclose($json);
 		return true;
 	}
+	
+	public function json() {
+		echo json_encode($this->users);
+	}
 
 }
 
